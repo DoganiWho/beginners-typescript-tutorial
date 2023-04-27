@@ -17,8 +17,20 @@ interface Post {
  * How do we ensure that makeUser ALWAYS
  * returns a user?
  */
-const makeUser = () => {
-  return {};
+// https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#return-type-annotations
+const makeUser = ():User => {
+  return {
+    id: 1,
+    firstName: "Leslie",
+    lastName: "Skog",
+    role: "super-admin",
+    posts: [
+      {
+        id: 1,
+        title: "How I drink so much coffee",
+      },
+    ],
+  };
 };
 
 it("Should return a valid user", () => {

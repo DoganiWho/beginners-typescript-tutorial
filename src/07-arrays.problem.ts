@@ -3,7 +3,7 @@ interface User {
   firstName: string;
   lastName: string;
   role: "admin" | "user" | "super-admin";
-  posts: Post;
+  posts: Post[]; //Array<Post> also works and is called a Generic type
 }
 
 interface Post {
